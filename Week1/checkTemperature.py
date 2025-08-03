@@ -1,4 +1,5 @@
 #Week 1 - Check Temperature (lorenzoagaloos-270729354)
+
 # This script calculates the average, maximum, and minimum temperatures from a given array
 import numpy as np
 
