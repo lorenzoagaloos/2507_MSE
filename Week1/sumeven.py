@@ -12,7 +12,7 @@ def SumEvenNumbers():
         output = 0
         i = 0
         while i <= n:
-            print(", ", i)
+            print(" ", i)
             output += i
             i += 2
         return output
