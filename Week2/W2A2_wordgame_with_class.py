@@ -38,6 +38,7 @@ def play_game():
     attempts = 10
     guessed_letters = set() # Set to keep track of guessed letters
 
+    # Create an instance of DateFormatter to format the start time
     df = DateFormatter()
     print("\nGame started at:", df.format_time(fmt="%A, %d-%B-%Y %I:%M:%p"))
 
@@ -89,7 +90,12 @@ def main():
         play_game()
         play_again = input("\nDo you want to play again? (yes/no): ").strip().lower()
         if play_again != 'yes':
-            print("\nThanks for playing! Goodbye!\n")
+            print("\nThanks for playing! Goodbye!")
+
+            # Create an instance of DateFormatter to format the end time
+            df = DateFormatter()
+            print("\nGame ended at:", df.format_time(fmt="%A, %d-%B-%Y %I:%M:%p\n"))
+
             break
 if __name__ == "__main__":
     main()
