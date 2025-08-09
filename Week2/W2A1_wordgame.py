@@ -84,7 +84,7 @@ def main():
         play_game()
         play_again = input("\nDo you want to play again? (yes/no): ").strip().lower()
         if play_again != 'yes':
-            print("\nThanks for playing! Goodbye!")
+            print("\nThanks for playing! Goodbye!\n")
             break
 if __name__ == "__main__":
     main()
