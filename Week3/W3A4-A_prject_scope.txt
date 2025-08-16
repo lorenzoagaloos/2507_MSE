@@ -1,0 +1,8 @@
+Week 3 Activity 4 - (lorenzoagaloos-270729354)
+
+1. Project scope (short paragraph)
+Write a  story that defines the purpose and scope of the database. Describe the main entities (e.g., students, lecturers, etc).
+
+The purpose of this database is create a repository for the records keeping of all student information attending the MSE-July 2025 intake section A, including the relevant attendance records, lecturers, programs, assessments scores, and final grades. This database needs to track each student's academic performance through their attendance, assessment submission status, scores, final grades, and pass/fail status.
+
+The project scope needs to design and implement a relational database, create interfaces that will be easy to use and understand for data input and report generation.
