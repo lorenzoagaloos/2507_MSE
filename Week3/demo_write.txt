@@ -1,0 +1,2 @@
+Hello, this new line over-writes all the texts in the file.
+This is another line.
