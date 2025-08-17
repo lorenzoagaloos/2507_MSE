@@ -12,10 +12,23 @@ def create_table():
     conn = create_connection()
     cursor = conn.cursor()
     cursor.execute('''
-        CREATE TABLE IF NOT EXISTS students (
+            CREATE TABLE IF NOT EXISTS students (
             Stu_ID INTEGER PRIMARY KEY AUTOINCREMENT,
             Stu_name TEXT NOT NULL,
             Stu_address TEXT NOT NULL UNIQUE
+        )
+    ''')
+    conn.commit()
+    conn.close()
+
+def create_table():
+    conn = create_connection()
+    cursor = conn.cursor()
+    cursor.execute('''
+            CREATE TABLE IF NOT EXISTS users (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            name TEXT NOT NULL,
+            email TEXT NOT NULL UNIQUE
         )
     ''')
     conn.commit()
