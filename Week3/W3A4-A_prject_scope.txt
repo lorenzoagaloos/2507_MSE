@@ -1,8 +1,55 @@
 Week 3 Activity 4 - (lorenzoagaloos-270729354)
 
 1. Project scope (short paragraph)
-Write a  story that defines the purpose and scope of the database. Describe the main entities (e.g., students, lecturers, etc).
+Write a  story that defines the purpose and scope of the database. 
+Describe the main entities (e.g., students, lecturers, etc).
 
-The purpose of this database is create a repository for the records keeping of all student information attending the MSE-July 2025 intake section A, including the relevant attendance records, lecturers, programs, assessments scores, and final grades. This database needs to track each student's academic performance through their attendance, assessment submission status, scores, final grades, and pass/fail status.
+The purpose of this database is create a repository for the records keeping 
+of all student information attending the MSE-July 2025 intake section A, 
+including the relevant attendance records, lecturers, programs, assessments scores, 
+and final grades. This database needs to track each student's academic performance 
+through their attendance, assessment submission status, scores, final grades, and pass/fail status.
 
-The project scope needs to design and implement a relational database, create interfaces that will be easy to use and understand for data input and report generation.
+The project scope needs to design and implement a relational database, 
+create interfaces that will be easy to use and understand for data input 
+and report generation.
+
+
+2. List all entities with brief descriptions of their roles and attributes (e.g., Student, Course, Class, Lecturer, etc)
+Student – is an entity who is enrolled at Yoobee College MSE800 – July 2025 intake under section A
+Attributes:
+-	Student ID
+-	Name
+-   Email
+-	DOB
+-	Age
+-	Gender
+
+Lecturer – is an academic instructor who will conduct lessons in a specific subject
+Attributes:
+-	Lecturer ID
+-	Name
+-   Email
+-	DOB
+-	Age
+-	Gender
+-	Department
+-	Subjects
+ 	
+Subject – is the specified area of study that is part of the curriculum.
+Attributes:
+-	Subject ID
+-	Subject name
+-	Description
+-	Credit Hours
+
+Assessment – is a criteria or method used to evaluate and measure a student’s performance and understanding of the subject being undertaken. This will also be the main metric to quantify whether a student passes or fails the subject.
+Attributes:
+-	Assessment code
+-	Assessment name
+-	Assessment weightage
+-	Submission Date
+-	Total Marks
+-	Status (Pass/Fail)
+
+
