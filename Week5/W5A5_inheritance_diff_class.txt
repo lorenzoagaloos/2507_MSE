@@ -1,0 +1,7 @@
+# W5A5: question - when we can use inheritance?
+
+Can we update the code with adding a "Course" class to Week 5, Activity 3
+
+A: Yes, we can update the code by adding a "Course" class, however the "Course" class cannot inherit
+the attributes of the "Person" class since it has a different set of attributes not common with the "Person" class.
+
