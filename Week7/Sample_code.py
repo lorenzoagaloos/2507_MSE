@@ -26,5 +26,7 @@ class ShapeFactory:
 
 
 factory = ShapeFactory()
-shape = factory.create_shape("triangle")   
+shape = factory.create_shape("triangle") 
+print(shape.draw())
+shape = factory.create_shape("circle")  
 print(shape.draw())  

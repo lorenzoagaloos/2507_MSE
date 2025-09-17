@@ -19,11 +19,16 @@ class Square(Shape):
     def draw(self) -> str:
         return "Drawing a Square"
 
+class Triangle(Shape):
+    def draw(self) -> str:
+        return "Drawing a Triangle"
+    
 # 3) Factory
 class ShapeFactory:
     _registry = {
         "circle": Circle,
         "square": Square,
+        "triangle": Triangle,
     }
 
     @classmethod
@@ -52,5 +57,5 @@ if __name__ == "__main__":
     square = factory.create("square")
     print(square.draw())
 
-    # circle = factory.create("triangle")  # This will raise a ValueError
-    # print(circle.draw())  
+    triangle = factory.create("triangle")
+    print(triangle.draw())  
