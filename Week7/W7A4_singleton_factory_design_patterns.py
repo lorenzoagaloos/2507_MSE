@@ -4,7 +4,6 @@
 # Use the Factory Design Pattern to create different payment method objects dynamically.
 # Ensure the payment gateway (the main entry point for processing payments) is implemented as a Singleton, so only one instance of the gateway exists in the system.
 
-
 # The abc module provides the infrastructure for defining Abstract Base Classes (ABCs) in Python.
 from abc import ABC, abstractmethod
 
@@ -83,7 +82,6 @@ class PaymentMethodFactory:
             return EFTPOS()
         else:
             raise ValueError(f"Unknown payment method: {method_type}")
-
 
 if __name__ == "__main__":
     
