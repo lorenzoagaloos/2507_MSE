@@ -5,7 +5,6 @@
 # Ensure the payment gateway (the main entry point for processing payments) is implemented as a Singleton, so only one instance of the gateway exists in the system.
 
 
-
 # The abc module provides the infrastructure for defining Abstract Base Classes (ABCs) in Python.
 from abc import ABC, abstractmethod
 
@@ -26,7 +25,7 @@ class SingletonMeta(type):
 class PaymentGateway(metaclass=SingletonMeta):
     def process_payment(self, payment_method, amount):
         payment_method.pay(amount)
-        print(f"Processed payment of ${amount} using {payment_method.__class__.__name__}")
+        print(f"Processed payment of ${amount} using {payment_method.__class__.__name__}\n")
 
 # Abstract Payment Method
 # This abstract class defines the interface for different payment methods
