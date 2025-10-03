@@ -27,12 +27,12 @@ class TextCounter:
 # Example usage:
 if __name__ == "__main__":
     # Test cases
-    Words_1 = "The Quick Brown Fox!"
-    Words_2 = ["Jumped", " ", "over", " ", "the", " ", "Lazy"," ", "DOG", "!"]
+    WORDS1 = "The Quick Brown Fox!"
+    WORDS2 = ["Jumped", " ", "over", " ", "the", " ", "Lazy"," ", "DOG", "!"]
 
     # Create instances of TextCounter
-    Count1 = TextCounter(Words_1)
-    Count2 = TextCounter(Words_2)
+    Count1 = TextCounter(WORDS1)
+    Count2 = TextCounter(WORDS2)
 
     # Print results
     print(f"Text 1 Length: {Count1.total_length()}, Uppercase Count: {Count1.count_u_case()}")
