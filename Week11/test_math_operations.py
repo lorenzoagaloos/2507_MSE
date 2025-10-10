@@ -19,6 +19,11 @@ def divide(x, y):
         raise ValueError("Cannot divide by zero")
     return x / y
 
+def remainder(x, y):
+    """ Get the remainder of division. """
+    return x % y
+
+
 class TestMathOperations(TestCase):
     """ Test cases for math operations. """
     def test_add(self):
@@ -39,6 +44,10 @@ class TestMathOperations(TestCase):
         self.assertEqual(divide(5, 2), 2.5)
         with self.assertRaises(ValueError):
             divide(1, 0)
+    def test_remainder(self):
+        """ Test remainder. """
+        self.assertEqual(remainder(5, 2), 1)
+        self.assertEqual(remainder(4, 2), 0)
 
 if __name__ == '__main__':
     main()
