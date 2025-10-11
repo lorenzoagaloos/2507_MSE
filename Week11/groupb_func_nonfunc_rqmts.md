@@ -6,10 +6,11 @@ Functional Requirements
 FR-001: Image Upload and Preprocessing - Done
 FR-002: Dual Model Classification - WIP
 FR-003: Explainable AI - Grad-CAM Heatmaps - WIP
-FR-004: Clinical Report Generation- To do
-FR-005: Responsive Web Interface - WIP
-FR-006: RESTful API - WIP
-FR-007: Processing Performance - WIP
+FR-004: Evaluation Metrics for Image Classification - To do
+FR-005: Clinical Report Generation- To do
+FR-006: Responsive Web Interface - WIP
+FR-007: RESTful API - WIP
+FR-008: Processing Performance - WIP
 
 Non-Functional Requirements
 NFR-001: Performance - WIP
