@@ -6,5 +6,10 @@ app = Flask(__name__)
 def hello_flask():
     return render_template('index.html')
 
+@app.route("/welcome", methods=['POST'])
+def welcome():
+    name = request.form['username']
+    return render_template('welcome.html', name=name)
+
 if __name__ == "__main__":
     app.run(debug=True)
