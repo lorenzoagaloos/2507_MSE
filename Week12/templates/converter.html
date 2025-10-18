@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enzo's Temperature Converter</title>
+    <style>
+        body { font-family: Calibri; max-width: 400px; margin: 50px auto; padding: 20px; }
+        input, select, button { margin: 10px 0; padding: 8px; width: 100%; }
+        .result { background: #e8f5e9; padding: 15px; border-radius: 5px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Enzo's Temperature Converter</h1>
+    <form method="POST">
+        <label>Temperature Value:</label>
+        <input type="number" step="any" name="temp" required>
+        
+        <label>Conversion Type:</label>
+        <select name="conversion">
+            <option value="c_to_f">Celsius → Fahrenheit</option>
+            <option value="f_to_c">Fahrenheit → Celsius</option>
+            <option value="c_to_k">Celsius → Kelvin</option>
+            <option value="k_to_c">Kelvin → Celsius</option>
+            <option value="f_to_k">Fahrenheit → Kelvin</option>
+            <option value="k_to_f">Kelvin → Fahrenheit</option>
+        </select>
+        
+        <button type="submit">Convert</button>
+    </form>
+    
+    {% if result %}
+    <div class="result">
+        <h3>Result: {{ result }}</h3>
+    </div>
+    {% endif %}
+</body>
+</html>
