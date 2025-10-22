@@ -1,0 +1,16 @@
+<! DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/styles.css"/>
+    <title>Flask</title>
+</head>
+<body>
+    <form action="/welcome" method="post">
+    <h1>Hello Flask</h1>
+    <input type="text" placeholder="Input your tutor name" name=:"username">
+    <button type="submit">Upload</button>
+    </form>
+</body>
+</html>

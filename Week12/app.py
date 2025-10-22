@@ -1,3 +1,4 @@
+"""Week12/app.py: A Flask application that renders an HTML template."""
 from flask import Flask, render_template
 
 app = Flask(__name__)
