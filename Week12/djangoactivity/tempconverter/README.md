@@ -1,6 +1,6 @@
 # Temperature Converter Django Web App
 
-A beautiful and functional temperature converter web application built with Django.
+A simple functional temperature converter web application built with Django.
 
 ## Features
 - Convert between Celsius, Fahrenheit, and Kelvin
@@ -23,7 +23,9 @@ A beautiful and functional temperature converter web application built with Djan
 
 3. **Open your browser and visit:**
    ```
-   http://127.0.0.1:8000/tempconverter
+   http://127.0.0.1:8000/
+
+4. **Click on the Temperature Converter Button to open the converter page**
    ```
 
 ## Usage

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Poll</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #8B4513 0%, #D2691E 50%, #F4A460 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+        }
+        
+        .coffee-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            animation: steam 2s ease-in-out infinite;
+        }
+        
+        @keyframes steam {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        h1 {
+            color: #8B4513;
+            margin-bottom: 0.5rem;
+            font-size: 2.2rem;
+        }
+        
+        .subtitle {
+            color: #666;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+        
+        .poll-options {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+        
+        .option {
+            flex: 1;
+        }
+        
+        input[type="radio"] {
+            display: none;
+        }
+        
+        label {
+            display: block;
+            padding: 1.5rem;
+            background: #f0f0f0;
+            border: 3px solid #ddd;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+        
+        input[type="radio"]:checked + label {
+            background: linear-gradient(135deg, #6a4c93 0%, #8b5cf6 100%);
+            color: white;
+            border-color: #6a4c93;
+            transform: scale(1.05);
+        }
+        
+        label:hover {
+            transform: scale(1.05);
+            border-color: #8b5cf6;
+        }
+        
+        .yes-option input[type="radio"]:checked + label {
+            background: linear-gradient(135deg, #10b981 0%, #34d399 100%);
+            border-color: #10b981;
+        }
+        
+        .no-option input[type="radio"]:checked + label {
+            background: linear-gradient(135deg, #ef4444 0%, #f87171 100%);
+            border-color: #ef4444;
+        }
+        
+        .submit-btn {
+            background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);
+            color: white;
+            border: none;
+            padding: 1rem 3rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(139, 69, 19, 0.4);
+        }
+        
+        .submit-btn:active {
+            transform: translateY(-1px);
+        }
+        
+        .thank-you {
+            display: none;
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #10b981 0%, #34d399 100%);
+            color: white;
+            border-radius: 15px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            animation: slideIn 0.5s ease-out;
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .thank-you.show {
+            display: block;
+        }
+        
+        .emoji {
+            font-size: 2rem;
+            margin-right: 0.5rem;
+        }
+        
+        .home-btn {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 0.8rem 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+        
+        .home-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="coffee-icon">☕</div>
+        <h1>Enzo's Coffee Poll</h1>
+        <p class="subtitle">We'd love to know your opinion!</p>
+        
+        <form id="pollForm">
+            <p style="color: #333; font-size: 1.3rem; margin-bottom: 1.5rem; font-weight: 600;">
+                Do you like coffee?
+            </p>
+            
+            <div class="poll-options">
+                <div class="option yes-option">
+                    <input type="radio" id="yes" name="coffee" value="yes">
+                    <label for="yes">
+                        <span class="emoji">👍</span>
+                        <br>Yes
+                    </label>
+                </div>
+                
+                <div class="option no-option">
+                    <input type="radio" id="no" name="coffee" value="no">
+                    <label for="no">
+                        <span class="emoji">👎</span>
+                        <br>No
+                    </label>
+                </div>
+            </div>
+            
+            <button type="submit" class="submit-btn">Submit Vote</button>
+        </form>
+        
+        <div id="thankYou" class="thank-you">
+            <span class="emoji">🎉</span>
+            Thank you for participating in our survey!
+            <span class="emoji">🎉</span>
+        </div>
+        
+        <a href="http://127.0.0.1:8000/" class="home-btn">🏠 Home</a>
+    </div>
+    
+    <script>
+        document.getElementById('pollForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const selected = document.querySelector('input[name="coffee"]:checked');
+            
+            if (selected) {
+                document.getElementById('thankYou').classList.add('show');
+                
+                // Optional: Hide the form after submission
+                setTimeout(() => {
+                    document.getElementById('pollForm').style.opacity = '0.5';
+                }, 100);
+            } else {
+                alert('Please select an option!');
+            }
+        });
+    </script>
+</body>
+</html>

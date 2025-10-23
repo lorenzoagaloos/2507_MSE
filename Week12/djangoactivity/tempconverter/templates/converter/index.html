@@ -156,6 +156,28 @@
             text-align: center;
         }
 
+        .home-btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #10b981 0%, #34d399 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 1em;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+            text-align: center;
+            width: 100%;
+            display: block;
+        }
+
+        .home-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+        }
+
         @media (max-width: 500px) {
             .container {
                 padding: 25px;
@@ -174,7 +196,7 @@
 <body>
     <div class="container">
         <div class="icon">🌡️</div>
-        <h1>Temperature Converter</h1>
+        <h1>Enzo's Temperature Converter</h1>
         <p class="subtitle">Convert between Celsius, Fahrenheit, and Kelvin</p>
 
         <form method="POST">
@@ -231,6 +253,8 @@
             </div>
         </div>
         {% endif %}
+
+        <a href="http://127.0.0.1:8000/" class="home-btn">🏠 Home</a>
     </div>
 </body>
 </html>
